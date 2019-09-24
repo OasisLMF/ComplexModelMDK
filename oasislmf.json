@@ -2,6 +2,7 @@
     "analysis_settings_file_path": "analysis_settings.json",
     "lookup_package_path": "complex_model",
     "keys_data_path": "./complex_model",
+    "ktools_alloc_rule_gul": 0,
     "model_version_file_path": "./complex_model/ModelVersion.csv",
     "source_accounts_file_path": "tests/data/SourceAccOEDPiWind.csv",
     "source_exposure_file_path": "tests/data/SourceLocOEDPiWind10.csv",
