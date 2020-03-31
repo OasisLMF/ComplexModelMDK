@@ -1,2 +1,2 @@
-oasislmf>=1.4.1
+oasislmf>=1.6.0
 msgpack
