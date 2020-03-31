@@ -1,5 +1,4 @@
 import itertools
-from interface import implements
 import json
 
 from oasislmf.utils import (
