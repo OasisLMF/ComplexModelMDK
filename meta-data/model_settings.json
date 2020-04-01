@@ -1,0 +1,19 @@
+{
+    "model_settings":{
+        "boolean_parameters": [
+            {"name":"peril_1", "desc":"Example Boolean option", "default":false },
+            {"name":"peril_2", "desc":"Example Boolean option", "default":true }
+        ]
+    },
+    "lookup_settings":{
+        "supported_perils":[
+           {"id": "WSS", "desc": "Single Peril: Storm Surge"},
+           {"id": "WTC", "desc": "Single Peril: Tropical Cyclone"},
+           {"id": "WW1", "desc": "Group Peril: Windstorm with storm surge"},
+           {"id": "WW2", "desc": "Group Peril: Windstorm w/o storm surge"}
+        ]
+    },
+    "data_settings": {
+	"group_fields": ["PortNumber", "AccNumber", "LocNumber"]
+    }
+}

@@ -3,7 +3,7 @@ FROM coreoasis/model_worker:latest
 COPY ./requirements.txt /tmp/ 
 RUN pip install -r /tmp/requirements.txt
 
-COPY ./conf.ini ./
+#COPY ./conf.ini ./
 COPY ./complex_model /var/oasis/complex_model
 COPY ./setup.py /var/oasis/
 RUN pip install -e /var/oasis/
