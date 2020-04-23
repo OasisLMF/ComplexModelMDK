@@ -1,6 +1,6 @@
 {
     "analysis_settings_json": "analysis_settings.json",
-    "ktools_alloc_rule_gul": 0,
+    "ktools_alloc_rule_gul": 1,
     "lookup_data_dir": "./complex_model",
     "lookup_package_dir": "complex_model",
     "model_data_dir": "./model_data",
