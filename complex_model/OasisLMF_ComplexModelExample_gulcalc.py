@@ -539,7 +539,10 @@ def main():
 
     # Read settings from analysis settings JSON
     analysis_settings = json.load(open(args.analysis_settings_file))
-    number_of_samples = analysis_settings['analysis_settings']['number_of_samples']
+    try:
+        number_of_samples = analysis_settings['analysis_settings']['number_of_samples']
+    except KeyError:
+        number_of_samples = analysis_settings['number_of_samples']
 
     # ktools gulcalc equivalent
     df_gul = gul_calc(
