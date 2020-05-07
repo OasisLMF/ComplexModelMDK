@@ -1,6 +1,6 @@
 {
     "analysis_settings_json": "/var/oasis/analysis_settings.json",
-    "ktools_alloc_rule_gul": 0,
+    "ktools_alloc_rule_gul": 1,
     "lookup_data_dir": "/var/oasis/complex_model",
     "lookup_package_dir": "/var/oasis/complex_model",
     "model_data_dir": "/var/oasis/model_data",
