@@ -4,7 +4,7 @@ import oasislmf.utils
 
 setup(
     name='OasisLMF_ComplexModelExample',
-    version='0.0.1',
+    version='1.0.0.0',
     entry_points={
         'console_scripts': [
             'complex_itemtobin=oasislmf.model_execution.complex_items_to_bin:main',
