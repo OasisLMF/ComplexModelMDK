@@ -160,7 +160,6 @@ def get_event_ids(inputs_dir, event_batch, max_event_batch):
     return events_pd['event_id'].to_numpy()[start_position:end_position]
 
 
-#@profile
 def get_model(event_ids, inputs_dir, static_dir):
     """
     Get Cummulative Distribution Functions (CDFs) from event ids, merging data
@@ -187,9 +186,6 @@ def get_model(event_ids, inputs_dir, static_dir):
     """
 
     df_model = pd.DataFrame({'event_id': event_ids})
-
-    # Testing: use event_id = 946
-#    df_model = df_model[(df_model['event_id'] == 946) | (df_model['event_id'] == 5)]
 
     df_model['order'] = df_model.index   # Preserve initial order
 
@@ -283,7 +279,6 @@ def get_output_loss(loss_output_stream):
     return output_loss
 
 
-#@profile
 def random_number_generation(event_id, group_id, number_of_samples):
     """
     Assign 32-bit number as seed to Mersenne Twister random number generator
@@ -313,7 +308,6 @@ def random_number_generation(event_id, group_id, number_of_samples):
     return rng.uniform(size=number_of_samples)
 
 
-#@profile
 def calculate_guls(row):
     """
     Calculate Ground Up Losses (GULs) for each sample. In this example, all bin
@@ -337,7 +331,6 @@ def calculate_guls(row):
         ) * row['tiv']
 
 
-#@profile
 def gul_calc(
     number_of_samples, df_model, df_items, df_damage_bin_dict, static_dir
 ):
