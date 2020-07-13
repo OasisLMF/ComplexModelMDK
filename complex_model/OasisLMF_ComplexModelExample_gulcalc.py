@@ -465,6 +465,15 @@ def gul_calc(
     )
     df_gul.loc[df_gul['sidx'] == -3, 'loss'] = df_gul['tiv'] / df_gul['item_count']
 
+    # Implement GUL alloc rule 1
+    # If total loss exceeds TIV, split TIV in same proportions as losses
+    df_gul['total_loss'] = df_gul.groupby(
+        ['event_id', 'coverage_id', 'sidx']
+    )['loss'].transform('sum')
+    df_gul.loc[
+        df_gul['total_loss'] > df_gul['tiv'], ['loss']
+    ] = df_gul['tiv'] * df_gul['loss'] / df_gul['total_loss']
+
     # Drop all but required columns
     gul_req_cols = ['event_id', 'item_id', 'sidx', 'loss']
     df_gul.drop(
