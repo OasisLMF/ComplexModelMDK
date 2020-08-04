@@ -30,7 +30,6 @@ services:
      - STARTUP_RUN_MIGRATIONS=true
    volumes:
      - ${OASIS_MEDIA_ROOT:-./docker-shared-fs}:/shared-fs:rw
-     - ./model_resource.json:/var/www/oasis/src/server/static/model_resource.json
   worker-monitor:
    image: coreoasis/api_server:latest
    command: [wait-for-server, 'server:8000', celery, worker, -A, src.server.oasisapi, --loglevel=INFO]
@@ -79,8 +78,9 @@ services:
      - OASIS_CELERY_DB_USER=celery
      - OASIS_CELERY_DB_NAME=celery
      - OASIS_CELERY_DB_PORT=3306
+     - OASIS_OASISLMF_CONFIG=/var/oasis/complex_model/oasislmf.json
     volumes:
-     - ./model_data:/var/oasis/model_data/:rw
+     - ./:/var/oasis/:rw
      - ${OASIS_MEDIA_ROOT:-./docker-shared-fs}:/shared-fs:rw
   server-db:
     image: mysql

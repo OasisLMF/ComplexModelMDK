@@ -1,5 +1,4 @@
 import itertools
-from interface import implements
 import json
 
 from oasislmf.utils import (
@@ -43,8 +42,8 @@ class DummyComplexModelKeysLookup(OasisBaseKeysLookup):
             coverage_type == coverages.COVERAGE_TYPES['buildings']['id']
         ):
             data = {
-                "area_peril_id": 1,
-                "vulnerability_id": 1
+                "area_peril_id": 54,
+                "vulnerability_id": 2
             }
 
         elif (
@@ -52,8 +51,8 @@ class DummyComplexModelKeysLookup(OasisBaseKeysLookup):
             coverage_type == coverages.COVERAGE_TYPES['contents']['id']
         ):
             data = {
-                "area_peril_id": 2,
-                "vulnerability_id": 2
+                "area_peril_id": 54,
+                "vulnerability_id": 5
             }
 
         elif (
@@ -61,8 +60,8 @@ class DummyComplexModelKeysLookup(OasisBaseKeysLookup):
             coverage_type == coverages.COVERAGE_TYPES['buildings']['id']
         ):
             data = {
-                "area_peril_id": 3,
-                "vulnerability_id": 3
+                "area_peril_id": 154,
+                "vulnerability_id": 8
             }
 
         elif (
@@ -70,8 +69,8 @@ class DummyComplexModelKeysLookup(OasisBaseKeysLookup):
             coverage_type == coverages.COVERAGE_TYPES['contents']['id']
             ):
             data = {
-                "area_peril_id": 4,
-                "vulnerability_id": 4
+                "area_peril_id": 154,
+                "vulnerability_id": 11
             }
 
         return {
