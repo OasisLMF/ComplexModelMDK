@@ -4,10 +4,17 @@
 
 ## Run complex model example via MDK
 * Install MDK dependent packages, for ubuntu
+
 ```
-sudo apt-get update && sudp apt-get install libspatialindex-dev unixodbc-dev build-essential libtool zlib1g-dev autoconf
+sudo apt-get update && sudo apt-get install libspatialindex-dev unixodbc-dev build-essential libtool zlib1g-dev autoconf
 ```
-* Install OasisLmf `pip install oasislmf>=1.3.1`
+
+* Install OasisLMF and other required packages:
+
+  ```
+  pip install -r requirements.txt
+  ```
+
 * Install the custom item commands and the example custom GulCalc:
 
   ```
