@@ -21,10 +21,12 @@ sudo apt-get update && sudo apt-get install libspatialindex-dev unixodbc-dev bui
   pip install -e .
   ```
 
-* Run the MDK commands, for example:
+* Run the MDK commands using either implicit calling of the installed package or the explicit specification of a supplier model runner, for example:
 
   ```
-  oasislmf model run -C oasislmf.json --verbose
+  oasislmf model run -C oasislmf_implicit.json --verbose
+
+  oasislmf model run -C oasislmf_explicit.json --verbose
   ```
 
 ## Run the complex model example using the API & UI
