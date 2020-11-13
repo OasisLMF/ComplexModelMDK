@@ -11,7 +11,7 @@ from oasislmf.utils.status import (
     OASIS_KEYS_NM,
     OASIS_KEYS_STATUS
 )
-from oasislmf.model_preparation.lookup import OasisBaseKeysLookup
+from oasislmf.preparation.lookup import OasisBaseKeysLookup
 
 class DummyComplexModelKeysLookup(OasisBaseKeysLookup):
 
