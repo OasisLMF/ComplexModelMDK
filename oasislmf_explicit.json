@@ -6,5 +6,6 @@
     "model_data_dir": "./model_data",
     "model_version_csv": "./complex_model/ModelVersion.csv",
     "oed_accounts_csv": "tests/data/SourceAccOEDPiWind.csv",
-    "oed_location_csv": "tests/data/SourceLocOEDPiWind10.csv"
+    "oed_location_csv": "tests/data/SourceLocOEDPiWind10.csv",
+    "model_package_dir": "src/model_execution_worker"
 }
