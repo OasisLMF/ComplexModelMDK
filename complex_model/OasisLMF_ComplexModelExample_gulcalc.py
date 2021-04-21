@@ -236,7 +236,7 @@ def get_model(event_ids, inputs_dir, static_dir):
         os.path.join(static_dir, 'damage_bin_dict.bin'), 'damagebintocsv'
     )
     # Drop unrequired column to free memory
-    df_damage_bin_dict.drop('interval_type', axis=1, inplace=True)
+    #df_damage_bin_dict.drop('interval_type', axis=1, inplace=True)
     df_model = pd.merge(
         df_model, df_damage_bin_dict[['bin_index', 'interpolation']],
         how='inner', left_on='damage_bin_id', right_on='bin_index'
