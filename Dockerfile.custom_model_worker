@@ -1,4 +1,4 @@
-FROM coreoasis/model_worker:1.6.0 
+FROM coreoasis/model_worker:1.16.0 
 
 RUN pip install --upgrade pip==20.0.2
 
