@@ -2,7 +2,7 @@
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 export OASIS_VER='1.16.0'
-export UI_VER='1.9.0'
+export UI_VER='1.8.2'
 
 # SETUP AND RUN COMPLEX MODEL EXAMPLE
 # Reset compose file to last commit && update tag number 
