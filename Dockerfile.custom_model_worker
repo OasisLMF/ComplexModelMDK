@@ -1,16 +1,17 @@
-FROM coreoasis/model_worker:1.16.0 
+FROM coreoasis/model_worker:latest 
 
-RUN pip install --upgrade pip==20.0.2
+WORKDIR /home/worker
+
+#RUN pip install --upgrade pip==20.0.2
 
 COPY ./requirements.txt /tmp/ 
 RUN pip install -r /tmp/requirements.txt
 
-#COPY ./conf.ini ./
-COPY ./complex_model /var/oasis/complex_model
-COPY ./setup.py /var/oasis/
-RUN pip install -e /var/oasis/
+COPY ./complex_model /home/worker/model/complex_model
+COPY ./setup.py /home/worker/model/setup.py
+RUN pip install -e /home/worker/model
 
-#COPY ./oasislmf.json /var/oasis/custom/
-#COPY ./analysis_settings.json /var/oasis/custom/
-#COPY ./tests/data/ /var/oasis/custom/tests/data/
-#ENTRYPOINT /bin/bash
+COPY ./meta-data/model_settings.json /home/worker/model/meta-data/model_settings.json
+COPY ./oasislmf_deploy.json /home/worker/model/oasislmf.json
+
+ENTRYPOINT ./startup.sh

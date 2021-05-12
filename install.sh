@@ -1,14 +1,14 @@
 #!/bin/bash
 SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-export OASIS_VER='1.6.0'
-export UI_VER='1.6.0'
+export OASIS_VER='1.16.0'
+export UI_VER='1.9.0'
 
 # SETUP AND RUN COMPLEX MODEL EXAMPLE
 # Reset compose file to last commit && update tag number 
 cd $SCRIPT_DIR
 git checkout -- docker-compose.yml
-sed -i 's|:latest|:${OASIS_VER}|g' docker-compose.yml
+sed -i "s|:latest|:${OASIS_VER}|g" docker-compose.yml
 
 # reset and build custom worker
 git checkout -- Dockerfile.custom_model_worker
@@ -33,7 +33,7 @@ fi
 # Reset UI docker Tag
 cd $SCRIPT_DIR/$GIT_UI
 git checkout -- docker-compose.yml
-sed -i 's|:latest|:${UI_VER}|g' docker-compose.yml
+sed -i "s|:latest|:${UI_VER}|g" docker-compose.yml
 cd $SCRIPT_DIR
 
 # Start UI
