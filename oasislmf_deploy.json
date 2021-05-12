@@ -1,0 +1,8 @@
+{
+    "ktools_alloc_rule_gul": 1,
+    "lookup_data_dir": "/var/oasis/keys_data",
+    "lookup_module_path": "/home/worker/model/complex_model",
+    "model_data_dir": "/var/oasis/model_data",
+    "model_version_csv": "/var/oasis/keys_data/ModelVersion.csv",
+    "model_package_dir": "src/model_execution_worker"
+}
